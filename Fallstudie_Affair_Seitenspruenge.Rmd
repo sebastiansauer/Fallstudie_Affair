@@ -3,10 +3,14 @@ title: "Fallstudie Affair/Seitensprünge mit R"
 subtitle: "mit Lösungen"
 author: "Sebastian Sauer"
 date: "14 April 2016"
+urlcolor: blue
 output:
-   html_document:
-    toc: TRUE
-    number_sections: true
+  pdf_document:
+    number_sections: yes
+    toc: yes
+  html_document:
+    number_sections: yes
+    toc: yes
 ---
 
 
@@ -353,6 +357,20 @@ tidy(lm10) %>% kable
 
 
 Puh. Geschafft!
-  
+
+
+# Versionshinweise und SessionInfo
+* Datum erstellt: `r Sys.Date()`
+* R Version: `r getRversion()`
+* `dplyr` Version: `r packageVersion("dplyr")`
+
+
+
+```{r}
+sessionInfo()
+```
+
+
+
   
   
