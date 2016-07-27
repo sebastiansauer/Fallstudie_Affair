@@ -4,9 +4,11 @@ subtitle: "mit Lösungen"
 author: "Sebastian Sauer"
 date: "14 April 2016"
 output:
-  github_document
-  toc: TRUE
-___
+   html_document:
+    toc: TRUE
+    number_sections: true
+---
+
 
 ```{r, include = FALSE, cache = TRUE}
 knitr::opts_chunk$set(echo = TRUE)
