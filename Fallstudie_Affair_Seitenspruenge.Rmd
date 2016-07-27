@@ -2,7 +2,7 @@
 title: "Fallstudie Affair/Seitensprünge mit R"
 subtitle: "mit Lösungen"
 author: "Sebastian Sauer"
-date: "14 April 2016"
+date: "`r Sys.Date()`"
 urlcolor: blue
 output:
   pdf_document:
