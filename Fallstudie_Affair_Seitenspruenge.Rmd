@@ -19,6 +19,8 @@ Wovon ist die Häufigkeit von Affären (Seitensprüngen) in Ehen abhängig? Dies
 
 Quelle: <http://statsmodels.sourceforge.net/0.5.0/datasets/generated/fair.html>
 
+Der Datensatz findet sich (in ähnlicher Form) auch im R-Paket `COUNT`.
+
 Laden wir als erstes den Datensatz in R. Wählen Sie zuerst das Verzeichsis als Arbeitsverzeichnis, in dem die Daten liegen. Dann laden Sie z.B. mit dem R-Commander (s. Skript) oder "per Hand" z.B. so:
 
 ```{r}
