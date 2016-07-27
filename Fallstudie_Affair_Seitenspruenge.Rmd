@@ -110,11 +110,15 @@ Diesen Befehl könnten wir für jede Spalte auführen:
 sum(is.na(Affair$affairs))
 ```
 
+Oder lieber alle auf einmal:
 
 ```{r}
 Affair %>% 
   summarise_each(funs(sum(is.na(.))))
 ```
+
+
+Übrigens gibt es ein gutes [Cheat Sheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) für `dplyr`.
 
 Ah, gut, keine fehlenden Werte. Das macht uns das Leben leichter.
 
@@ -226,6 +230,8 @@ r2_diff <- round(r2_lm3 - r2_lm1, 2)
 
 Wir sehen, dass beim 1. Regressionsmodell das R^2 `r round(r2_lm1, 2)` war; beim 2. Modell `r round(r2_lm2, 2)` und beim 3. Modell liegt R^2 bei `r round(r2_lm3, 2)`. Die Differenz zwischen Modell 1 und 3 liegt bei (gerundet) `r r2_diff`; wenig.
   
+  
+
 
 
 
@@ -354,6 +360,23 @@ tidy(lm10) %>% kable
 ```
 
 
+# Visualisieren wir mal was!
+
+Ok, wie wäre es damit:
+
+```{r}
+Affair %>% 
+   select(affairs, gender, children, rating) %>%
+  ggplot(aes(x = affairs, y = rating)) + geom_jitter(aes(color = gender, shape = children)) 
+```
+
+
+```{r}
+Affair %>% 
+   mutate(rating_dichotom = ntile(rating, 2)) %>% 
+   ggplot(aes(x = yearsmarried, y = affairs)) + geom_jitter(aes(color = gender)) +
+  geom_smooth()
+```
 
 
 Puh. Geschafft!
