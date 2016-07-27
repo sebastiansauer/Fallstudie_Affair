@@ -11,7 +11,7 @@ output:
 
 
 ```{r, include = FALSE, cache = TRUE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE)
 ```
 
 
@@ -19,7 +19,7 @@ Wovon ist die Häufigkeit von Affären (Seitensprüngen) in Ehen abhängig? Dies
 
 Quelle: <http://statsmodels.sourceforge.net/0.5.0/datasets/generated/fair.html>
 
-Der Datensatz findet sich (in ähnlicher Form) auch im R-Paket `COUNT`.
+Der Datensatz findet sich (in ähnlicher Form) auch im R-Paket `COUNT` (https://cran.r-project.org/web/packages/COUNT/index.html).
 
 Laden wir als erstes den Datensatz in R. Wählen Sie zuerst das Verzeichsis als Arbeitsverzeichnis, in dem die Daten liegen. Dann laden Sie z.B. mit dem R-Commander (s. Skript) oder "per Hand" z.B. so:
 
@@ -58,7 +58,7 @@ table(Affair$affairs)
 
 Man kann sich viele Statistiken mit dem Befehl `describe` aus `psych` ausgeben lassen, das ist etwas praktischer:
 
-```{r}
+```{r, eval = TRUE, echo = TRUE}
 library(psych)
                  
 describe(Affair$affairs)
